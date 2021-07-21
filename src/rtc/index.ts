@@ -1,5 +1,5 @@
-import AgoraRTC, { IAgoraRTCClient, ICameraVideoTrack } from "agora-rtc-sdk-ng";
-import { join, publishVideo } from "./join";
+import AgoraRTC, { IAgoraRTCClient, ICameraVideoTrack, ILocalVideoTrack } from "agora-rtc-sdk-ng";
+import { join, publishVideo, publishPDF } from "./join";
 
 export const RTCStore: {
   channel: string;
@@ -11,7 +11,7 @@ export const RTCStore: {
   publisherId: number;
   subscriberId: number;
   currentUserId: number;
-  localVideo?: ICameraVideoTrack,
+  localVideo?: ICameraVideoTrack | ILocalVideoTrack,
 } = {
   channel: import.meta.env.VITE_CHANNEL_NAME as string || "",
   appId: import.meta.env.VITE_APP_ID as string || "",
@@ -32,12 +32,13 @@ console.log(">>>>>> Store: ", RTCStore);
 
 export const intialize = async () => {
   AgoraRTC.setLogLevel(0);
-  const camera$ = document.querySelector("#app .publisher > .cameraBtn")!;
+  // const camera$ = document.querySelector("#app .publisher > .cameraBtn")!;
+  const pdfBtn$ = document.querySelector("#app .publisher .publishPdf")!;
   RTCStore.currentUserId = await join(RTCStore.role);
 
-  camera$.addEventListener("click", async (e) => {
+  pdfBtn$.addEventListener("click", async (e) => {
     e.preventDefault();
-    await publishVideo();
+    await publishPDF();
     return false;
   })
 }

@@ -13,17 +13,18 @@
         <button class="joinPublisher">Publisher</button>
         <button class="joinSubscriber">Subscriber</button>
       </div>
-      <div class="grid hidden">
-        <div class="publisher">
-          <div class="player"></div>
-          <button class="cameraBtn">Camera</button>
-        </div>
-        <div class="subscriber">
-          <div class="player"></div>
-        </div>
+      <!-- Publisher -->
+      <div class="publisher hidden">
         <div id="pdf">
           <canvas>Your Browser doesn't support this Feature</canvas>
         </div>
+        <div class="overlay">
+          <button class="publishPdf">Publish</button>
+        </div>
+      </div>
+      <!-- Subscriber -->
+      <div class="subscriber hidden">
+        <div class="player"></div>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>

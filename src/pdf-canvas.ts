@@ -23,7 +23,8 @@ export const generatePDF = async () => {
 
   const ctx = canvas$.getContext('2d')!;
   ctx.scale(DPR, DPR);
-  canvas$.height = docViewport.height * 1.5; // Having more height does not do anything will add blank space.
+  // canvas$.height = docViewport.height * 1.5; // Having more height does not do anything will add blank space.
+  canvas$.height = docViewport.height;
   canvas$.width = docViewport.width;
 
   const renderContext: RenderParameters = {

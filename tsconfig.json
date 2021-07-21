@@ -11,7 +11,11 @@
     "noEmit": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./@types"
+    ]
   },
-  "include": ["./src"]
+  "include": ["./@types", "./src"]
 }

@@ -43,3 +43,15 @@ export const publishVideo = async () => {
   const player$ = document.querySelector<HTMLElement>("#app .publisher > .player")!;
   RTCStore.localVideo.play(player$);
 }
+
+export const publishPDF = async () => {
+  const canvas$ = document.querySelector<HTMLCanvasElement>("#pdf > canvas")!;
+  const stream = canvas$.captureStream(15);
+  const [videoTrack] = stream.getVideoTracks();
+  const [localVideo] = await Promise.all([AgoraRTC.createCustomVideoTrack({
+    mediaStreamTrack: videoTrack,
+  }), RTCStore.client.setClientRole("host")]);
+  RTCStore.localVideo = localVideo;
+  console.log("LocalVideo: ", localVideo);
+  // await RTCStore.client.publish(RTCStore.localVideo);
+}
