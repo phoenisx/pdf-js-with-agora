@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-16.3.3.tgz#0c30adff37bbbc7a50eb9b58fae2a504d0d88038"
   integrity sha512-8h7k1YgQKxKXWckzFCMfsIwn0Y61UK6tlD6y2lOb3hTOIMlK3t9/QwHOhc81TwU+RMf0As5fj7NPjroERCnejQ==
 
+agora-rtc-sdk-ng@^4.6.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/agora-rtc-sdk-ng/-/agora-rtc-sdk-ng-4.6.0.tgz#f62a69856dad55006fdc102ae4aaa4bf11d8e40d"
+  integrity sha512-dWXFTe/jVDV7ud22Wf82T4fWvbja2VdpKr1Gp2lNriPjPJhj5KqMT7CCJZLKRnc0E2W5Sus8MwB97zdr+k1mfg==
+
 colorette@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.2.tgz#cbcc79d5e99caea2dbf10eb3a26fd8b3e6acfa94"

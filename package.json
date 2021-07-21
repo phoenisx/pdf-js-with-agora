@@ -11,6 +11,7 @@
     "vite": "^2.4.2"
   },
   "dependencies": {
+    "agora-rtc-sdk-ng": "^4.6.0",
     "modern-normalize": "^1.1.0",
     "pdfjs-dist": "2.8.335"
   }

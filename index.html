@@ -8,8 +8,22 @@
   </head>
   <body>
     <div id="app">
-      <div id="pdf">
-        <canvas>Your Browser doesn't support this Feature</canvas>
+      <div class="intro">
+        <h1>Join as:</h1>
+        <button class="joinPublisher">Publisher</button>
+        <button class="joinSubscriber">Subscriber</button>
+      </div>
+      <div class="grid hidden">
+        <div class="publisher">
+          <div class="player"></div>
+          <button class="cameraBtn">Camera</button>
+        </div>
+        <div class="subscriber">
+          <div class="player"></div>
+        </div>
+        <div id="pdf">
+          <canvas>Your Browser doesn't support this Feature</canvas>
+        </div>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
