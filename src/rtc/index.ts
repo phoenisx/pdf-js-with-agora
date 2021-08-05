@@ -32,6 +32,7 @@ console.log(">>>>>> Store: ", RTCStore);
 
 export const intialize = async () => {
   AgoraRTC.setLogLevel(0);
+  AgoraRTC.enableLogUpload();
   // const camera$ = document.querySelector("#app .publisher > .cameraBtn")!;
   const pdfBtn$ = document.querySelector("#app .publisher .publishPdf")!;
   RTCStore.currentUserId = await join(RTCStore.role);
